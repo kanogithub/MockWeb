@@ -94,3 +94,28 @@ header {
   border: 10px solid transparent;
   border-bottom-color: #fff;
 }
+
+.head-warpper {
+  padding: 1rem;
+}
+.logoframe {
+  position: relative;
+  background-color: #ff6700;
+  float: left;
+  width: 59px;
+  height: 59px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.logo {
+  position: absolute;
+  width: 118px;
+  left: -59px;
+  transition: left 0.3s;
+}
+.logo img {
+  width: 118px;
+}
+.logo:hover {
+  left: 0;
+}

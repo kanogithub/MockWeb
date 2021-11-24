@@ -35,3 +35,9 @@ table {
 textarea {
   white-space: revert;
 }
+
+.clearfix::after, .clearfix::before {
+  content: '';
+  display: table;
+  clear: both;
+}
