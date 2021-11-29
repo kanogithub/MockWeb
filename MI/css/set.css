@@ -73,6 +73,7 @@ header {
   box-shadow: 0 0 15px #42424244;
   overflow: hidden;
   transition: height 0.3s;
+  z-index: 99999;
 }
 #app .qrcode img {
   padding: 0.5rem;
@@ -95,8 +96,8 @@ header {
 
 /* head wrapper */
 /* logo */
-.head-warpper {
-  padding: 1rem;
+.head-warpper .container {
+  padding: 1rem 0;
 }
 .logoframe {
   position: relative;
@@ -127,12 +128,11 @@ header {
 .head-nav .nav {
   display: flex;
   align-items: center;
-  gap: 25px;
   height: 100%;
 }
 .head-nav li {
   display: inline-block;
-  padding: 15px 0;
+  padding: 20px 12px;
   font-size: 16px;
   color: #424242;
 }
@@ -142,4 +142,29 @@ header {
 .head-nav li.allgoods {
   visibility: hidden;
   padding-left: 3rem;
+}
+
+/* dropView */
+.head-warpper {
+  position: relative;
+}
+.head-warpper .dropview {
+  position: absolute;
+  height: 0px;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 1px 3px #424242;
+  overflow: hidden;
+  transition: height 0.5s;
+  transition-delay: 0.1s;
+  z-index: 99999;
+}
+.dropview img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+.head-nav li:not(.service, .community, .allgoods):hover ~ .dropview, .dropview:hover {
+  height: 280px;
 }
