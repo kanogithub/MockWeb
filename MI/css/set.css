@@ -168,3 +168,45 @@ header {
 .head-nav li:not(.service, .community, .allgoods):hover ~ .dropview, .dropview:hover {
   height: 280px;
 }
+
+/* search wrapper */
+.search-wrapper {
+  width: 296px;
+  padding: 0;
+  color: #5e5e5e;
+  background-color: #5e5e5e27;
+  border: 1px solid transparent;
+}
+.search-wrapper:hover {
+  background-color: #5e5e5e71;
+}
+
+.search-wrapper form {
+  height: 100%;
+}
+.search-wrapper input {
+  height: 100%;
+  width: calc(100% - 61px);
+  margin-right: 1px;
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  float: left;
+}
+.search-wrapper input:focus,
+.search-wrapper input:focus + button {
+  outline: 1px solid #ff6700;
+}
+
+.search-wrapper button {
+  height: 100%;
+  width: 60px;
+  background-color: #f5f5f5;
+  float: right;
+  text-align: center;
+}
+.search-wrapper button:hover {
+  background-color: #ff6700;
+  outline: 1px solid #ff6700;
+  color: #f5f5f5;
+}
