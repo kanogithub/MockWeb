@@ -154,6 +154,7 @@ header {
   width: 100%;
   top: 100%;
   left: 0;
+  background-color: #fff;
   box-shadow: 0 1px 3px #424242;
   overflow: hidden;
   transition: height 0.5s;
@@ -166,7 +167,7 @@ header {
   width: 70%;
 }
 .head-nav li:not(.service, .community, .allgoods):hover ~ .dropview, .dropview:hover {
-  height: 280px;
+  height: 230px;
 }
 
 /* search wrapper */
@@ -209,4 +210,29 @@ header {
   background-color: #ff6700;
   outline: 1px solid #ff6700;
   color: #f5f5f5;
+}
+
+/* front page */
+.front-page {
+  position: relative;
+  height: 460px;
+}
+
+/* left menu */
+.left-menu {
+  position: absolute;
+  width: 234px;
+  height: 100%;
+  color: #fff;
+  background-color: hsla(0, 0%, 0%, 0.45);
+}
+.left-menu li {
+  padding: 1rem;
+}
+.left-menu li:hover {
+  background-color: #ff6700;
+}
+.left-menu li a{
+  display: grid;
+  grid-template-columns: 1fr 1rem;
 }
