@@ -323,7 +323,9 @@ header {
 /* right hand sticky menu */
 .stickMenu {
   position: fixed;
-  top: 55vh;
+  bottom: 10vh;
+  right: 50%;
+  margin-right: -650px;
   color:#5e5e5e;
   text-align: center;
   font-size: 1.2em;

@@ -39,6 +39,3 @@
     }
 })();
 
-const rightStickyMenu = document.querySelector('.stickMenu');
-const mainContainer = document.querySelector('main .container');
-rightStickyMenu.style.left = `${mainContainer.offsetLeft + mainContainer.offsetWidth}px`;
