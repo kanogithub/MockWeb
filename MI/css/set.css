@@ -451,6 +451,7 @@ li.active {
 .outfit {
 	flex: auto;
 	overflow: hidden;
+	transition: all 150ms;
 }
 .outfit:hover {
 	transform: translateY(-1%);
@@ -462,7 +463,7 @@ li.active {
 	cursor: pointer;
 }
 .ad:hover {
-	transform: scale(1.03);
+	transform: scale(1.02);
 }
 .outfit:nth-child(1) .ad {
 	background-image: url('../img/ad1.jpg');
