@@ -1,4 +1,4 @@
-// Change Background Header
+/** Change Background Header */
 function scrollHeader() {
 	const header = document.getElementById('header')
 	if (this.scrollY >= 50) header.classList.add('scroll-header')
@@ -7,7 +7,7 @@ function scrollHeader() {
 
 window.addEventListener('scroll', scrollHeader)
 
-// Services Modal
+/** Services Modal */
 const modalViews = document.querySelectorAll('.services__modal'),
 	modalBtns = document.querySelectorAll('.services__button'),
 	modalClose = document.querySelectorAll('.services__modal-close')
@@ -29,7 +29,7 @@ modalClose.forEach((mClose) => {
 	})
 })
 
-// Mixed up filter
+/** Mixed up filter */
 let mixerPortfolio = mixitup('.work__container', {
 	selectors: {
 		target: '.work__card',
@@ -46,10 +46,31 @@ const workBtns = document.querySelectorAll('.work__item')
 // 	e.target.classList.add('active-work')
 // }
 const activeWork = (e) => {
+	console.dir(e.target)
 	workBtns.forEach((btn) => btn.classList.remove('active-work'))
 	e.target.classList.add('active-work')
 }
 
 workBtns.forEach((btn) => {
 	btn.addEventListener('click', activeWork)
+})
+
+/** Testimonial Swiper */
+let testimoinalSwiper = new Swiper('.mySwiper', {
+	spaceBetween: 24,
+	loop: true,
+	grabCursor: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	breakpoints: {
+		576: {
+			slidesPerView: 2,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 48,
+		},
+	},
 })
