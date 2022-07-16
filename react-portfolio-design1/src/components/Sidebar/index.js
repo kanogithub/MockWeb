@@ -4,6 +4,12 @@ import LogoS from '../../assets/images/logo-s.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import {
+  faLinkedin,
+  faGithub,
+  faYoutube,
+  faSkype,
+} from '@fortawesome/free-brands-svg-icons'
 
 function Sidebar() {
   return (
@@ -33,6 +39,37 @@ function Sidebar() {
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
       </nav>
+
+      <ul>
+        <li>
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/">
+            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/bobangajicsm/"
+          >
+            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.youtube.com/watch?v=Ff9LVV6gLR8&ab_channel=Codexbaba"
+          >
+            <FontAwesomeIcon icon={faYoutube} color="#4d4d4e" />
+          </a>
+        </li>
+        <li>
+          <a target="_blank" rel="noreferrer" href="skype:live:bobangajicsm">
+            <FontAwesomeIcon icon={faSkype} color="#4d4d4e" />
+          </a>
+        </li>
+      </ul>
     </div>
   )
 }
