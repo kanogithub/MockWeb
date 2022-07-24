@@ -10,7 +10,7 @@ function Logo() {
   const solidLogoRef = useRef()
 
   useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin) // TODO:gsap animation must learn
+    gsap.registerPlugin(DrawSVGPlugin) // HACK:gsap animation must learn
 
     gsap // drawing outline
       .timeline()

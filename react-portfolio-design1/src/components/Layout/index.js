@@ -3,6 +3,7 @@ import Sidebar from '../Sidebar'
 import './index.scss'
 
 function Layout() {
+  // HACK: Layout Mark Concept
   return (
     <div className="App">
       <Sidebar />

@@ -7,8 +7,8 @@ import Logo from './Logo'
 
 function Home() {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = Array.from('lobodan')
-  const jobArray = Array.from('web developer.')
+  const nameArray = 'lobodan'
+  const jobArray = 'web developer.'
 
   useEffect(() => {
     setTimeout(() => {
