@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;600;700&display=swap");
+@import "./reset.css";
+/* main component setting */
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  max-width: 1225px;
+  margin: 0 auto;
+}
+
+section {
+  max-width: 1085px;
+}
+
+.sub-head {
+  max-width: 1037px;
+}
+
+.desc-body {
+  max-width: 1037px;
+}
+
+.line {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: black;
+}
+
+a {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.btn-cta {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* header, navbar, burger menu */
+header .container {
+  padding: 1.75rem 4.25rem;
+  justify-content: space-between;
+}
+header .container a {
+  height: 42px;
+}
+header .container a .logo {
+  width: 75px;
+  height: 42px;
+}
+header .container .slideOverlay.open {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  -webkit-backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2.5px);
+}
+header .container .menu {
+  height: 42px;
+  z-index: 10;
+  transform: translateX(3rem);
+}
+@media screen and (min-width: 767px) {
+  header .container .menu {
+    transform: translateX(0);
+  }
+}
+header .container .menu .burgerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  margin: 0.5rem 1rem;
+  z-index: 5;
+}
+header .container .menu .burgerIcon .line {
+  transform-origin: right;
+  z-index: 5;
+}
+@media screen and (min-width: 767px) {
+  header .container .menu .burgerIcon {
+    display: none;
+  }
+}
+header .container .menu .nav-items {
+  display: block;
+  position: fixed;
+  top: -0.5rem;
+  right: 0;
+  padding: 0.5rem 5rem 1rem 1rem;
+  height: 0px;
+  width: 0px;
+  opacity: 0;
+  transition: 0.3s;
+  overflow: hidden;
+}
+header .container .menu .nav-items .btn-primary {
+  display: inline-block;
+  margin: 1rem 0.5rem 0.5rem;
+  padding: 0.7rem 2rem;
+  background-color: #42491c;
+  border: #42491c 1px solid;
+  color: white;
+  font-weight: 700;
+}
+header .container .menu .nav-items li:not(.btn-cta) {
+  cursor: pointer;
+  padding: 0;
+}
+header .container .menu .nav-items li:not(.btn-cta) a {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 12px;
+  padding: 1.5rem 1rem;
+  color: white;
+}
+@media screen and (min-width: 767px) {
+  header .container .menu .nav-items {
+    display: flex;
+    position: static;
+    height: auto;
+    width: auto;
+    padding: 0;
+    opacity: 1;
+  }
+  header .container .menu .nav-items li:not(.btn-cta) {
+    padding: 0.75rem 0.85rem;
+    transition: 0.3s;
+  }
+  header .container .menu .nav-items li:not(.btn-cta) a {
+    display: inline;
+    font-size: 12px;
+    padding: 0;
+    color: black;
+  }
+  header .container .menu .nav-items li:not(.btn-cta) a:hover {
+    transform: translateY(-2px);
+    text-shadow: rgba(95, 95, 99, 0.5490196078) 1px 2px 2px;
+  }
+  header .container .menu .nav-items .btn-primary {
+    display: inline;
+    margin: 0 0 0 0.75rem;
+  }
+  header .container .menu .nav-items .btn-primary:hover {
+    background-color: transparent;
+    color: #42491c;
+  }
+}
+header .container .menu.open .line {
+  background-color: white;
+}
+header .container .menu.open .line:nth-child(1) {
+  transform: rotateZ(-45deg) translateY(-1px);
+}
+header .container .menu.open .line:nth-child(2) {
+  opacity: 0;
+}
+header .container .menu.open .line:nth-child(3) {
+  transform: rotateZ(45deg) translateY(1px);
+}
+header .container .menu.open .nav-items {
+  height: 330px;
+  width: 330px;
+  border-radius: 5px;
+  background-color: rgba(95, 95, 99, 0.8666666667);
+  opacity: 1;
+}
+
+/* main body and picture */
+main .container {
+  display: flex;
+  justify-content: end;
+  margin-top: 1.5rem;
+}
+main .container section {
+  width: 100%;
+}
+main .container section .feature-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 1.5rem 0;
+}
+main .container section .feature-desc .desc-header {
+  display: flex;
+  height: 12px;
+  align-items: center;
+  width: 100%;
+}
+main .container section .feature-desc .desc-header .dressing {
+  width: 3.25rem;
+}
+main .container section .feature-desc .desc-header .sub-head {
+  font-size: 10px;
+  font-weight: 700;
+  width: 100%;
+  padding-left: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+main .container section .feature-desc .desc-body {
+  width: 100%;
+  padding-left: 2rem;
+}
+main .container section .feature-desc .desc-body h1 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+main .container section .feature-desc .desc-body .desc-content {
+  display: flex;
+  justify-content: space-between;
+}
+main .container section .feature-desc .desc-body .desc-content p {
+  display: block;
+  width: 50%;
+  font-size: 2.75vw;
+  color: #5f5f63;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+}
+main .container section .feature-desc .desc-body .desc-content .btn-secondary {
+  padding: 0.85rem 2rem;
+  background-color: #92927c;
+  border: #92927c 1px solid;
+  align-self: end;
+  margin-right: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+main .container section .feature-desc .desc-body .desc-content .btn-secondary:hover {
+  background-color: transparent;
+  color: #92927c;
+}
+@media screen and (min-width: 383px) {
+  main .container section .feature-desc .desc-body .desc-content p {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 576px) {
+  main .container section .feature-desc .desc-body .desc-content p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 767px) {
+  main .container section .feature-desc .desc-body .desc-content p {
+    font-size: 16px;
+  }
+  main .container section .feature-desc .desc-body .desc-content .btn-secondary {
+    display: inline-block;
+    align-self: initial;
+    margin: 0.5rem 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .container section .feature-desc .desc-body .desc-content p {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 383px) {
+  main .container section .feature-desc .desc-body h1 {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  main .container section .feature-desc .desc-body h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  main .container section .feature-desc .desc-body .desc-content {
+    display: block;
+  }
+  main .container section .feature-desc .desc-body h1 {
+    font-size: 3.25rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .container section .feature-desc .desc-body h1 {
+    font-size: 3.75rem;
+  }
+}
+main .container section .feature-image {
+  background-image: url("./assets/img/colin-meg-P4obKjGSZAQ-unsplash.jpg");
+  background-size: cover;
+  height: 50vh;
+}/*# sourceMappingURL=style.css.map */

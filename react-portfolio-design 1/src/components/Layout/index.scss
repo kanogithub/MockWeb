@@ -15,7 +15,7 @@
     position: absolute;
     left: 120px;
     font-size: 18px;
-    font-family: 'La Belle Aurore';
+    font-family: "La Belle Aurore";
 }
 
 .bottom-tags {
@@ -42,11 +42,13 @@
     animation-delay: 1s;
 }
 
-.about-page {
+.about-page,
+.contact-page {
     .text-zone {
         position: absolute;
         left: 10%;
-        transform: translateY(50%);
+        top: 50%;
+        transform: translateY(-50%);
         width: 35%;
         vertical-align: middle;
         display: table-cell;
@@ -54,7 +56,7 @@
 
         h1 {
             font-size: 53px;
-            font-family: 'Coolvetica';
+            font-family: "Coolvetica";
             color: #ffd700;
             font-weight: 400;
             margin-top: 0;
@@ -63,8 +65,8 @@
             left: 10px;
 
             &::before {
-                content: '<h1>';
-                font-family: 'La Belle Aurore';
+                content: "<h1>";
+                font-family: "La Belle Aurore";
                 font-size: 18px;
                 position: absolute;
                 margin-top: -10px;
@@ -74,8 +76,8 @@
             }
 
             &::after {
-                content: '</h1>';
-                font-family: 'La Belle Aurore';
+                content: "</h1>";
+                font-family: "La Belle Aurore";
                 font-size: 18px;
                 line-height: 18px;
                 position: absolute;
